@@ -1,7 +1,6 @@
 class TracksController < ApplicationController
-  def track
-    @track = Track.all.find do |track|
-      track.to_param == params[:param_title] 
-    end
+  def track 
+    id = params[:id]
+    @track = Track.find(id)
   end 
 end

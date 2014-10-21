@@ -8,7 +8,8 @@ RUBIO
 <% end %>
 <br>
 <% @tracks.each do |track| %> 
-  <%= link_to track.title, track_path(track) %>
-  <%= track_path(track.to_param, category: "metal") %>
   <%= image_tag track.cover, heigth: 80, width: 80 %> <%= track.title %> - <%= track.band %> <br>
+  <%= link_to track.title, track_path(track.sc_id) %>
+  <%= track.sc_id %>
+  </br>
 <% end %>
