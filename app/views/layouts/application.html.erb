@@ -1,14 +1,52 @@
 <!DOCTYPE html>
-<html>
 <head>
-  <title>Rubio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0;">
+  <title>Rubio.fm - The best RoR radio in the Universe</title>
+  <link rel="stylesheet" href="scss/stylesheets/style.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="main-container">
+		<header>
+			<a href="#" class="logo"><img alt="Rubio logo" src="/assets/logo.png" /></a>
+			<div class="motto">
+				Best [roo-bee] on [reyls] radio <br />
+				in the Universe
+			</div>
+		</header>
+		<div class="search-wrapper">
+			<div class="extra1"></div>
+			<div class="extra2"></div>
+			<div class="slogan">Find perfect music for your ultimate Rails coding</div>
+			<div class="search-control">
+        <%= form_tag "/search" do %>
+          <%= text_field_tag :title, nil, class: "search-input", placholder: "Title, Artist or whatever..." %>
+          <%= submit_tag "Search", class: 'search-button' %>
+        <% end %>
+			</div>
+		</div>
+    <div class="content"> <%= yield %> </div>
 
-<%= yield %>
+		<footer>
+			POWERED BY<br />
+			<a href="http://swmansion.com"><img alt="Software Mansion logo" src="/assets/swmansion.png" /></a>
+		</footer>
+	</div>
+
+	<script>
+  $(document).ready(function(){
+    $(".search-input").blur(function() {
+		$(this).css("width",300);
+	});
+	$(".search-input").focus(function() {
+		$(this).css("width",425);
+	});
+
+  });
+</script>
 
 </body>
 </html>

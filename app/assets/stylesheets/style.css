@@ -1,0 +1,440 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic&subset=latin,latin-ext);
+/* line 17, ../../../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 6, ../sass/style.scss */
+body {
+  font-family: "Lato",sans-serif;
+}
+
+/* line 14, ../sass/style.scss */
+textarea, input {
+  outline: none;
+}
+
+/* line 16, ../sass/style.scss */
+header {
+  width: 1200px;
+  margin: auto;
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+/* line 23, ../sass/style.scss */
+header .motto {
+  position: absolute;
+  width: 660px;
+  height: 120px;
+  right: 20px;
+  top: 53px;
+  font-size: 41px;
+  color: #4ecbce;
+  font-weight: 200;
+  text-align: center;
+  font-style: italic;
+}
+
+/* line 37, ../sass/style.scss */
+.search-wrapper {
+  width: 100%;
+  height: 140px;
+  background: #22bfa7;
+  box-sizing: border-box;
+  padding-top: 15px;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+/* line 47, ../sass/style.scss */
+.search-wrapper .extra1 {
+  width: 56px;
+  height: 134px;
+  background: url("/assets/nutka.png") no-repeat;
+  left: 50%;
+  margin-left: -460px;
+  position: absolute;
+  top: 4px;
+}
+/* line 57, ../sass/style.scss */
+.search-wrapper .extra2 {
+  width: 101px;
+  height: 114px;
+  background: url("/assets/sw.png") no-repeat;
+  right: 50%;
+  margin-right: -480px;
+  position: absolute;
+  top: 14px;
+}
+/* line 67, ../sass/style.scss */
+.search-wrapper .slogan {
+  font-weight: 200;
+  color: white;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 32px;
+}
+/* line 75, ../sass/style.scss */
+.search-wrapper .search-input {
+  height: 45px;
+  width: 300px;
+  border: none;
+  background: #befff5 url("/assets/search.png") no-repeat 6px 8px;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+  margin: 0;
+  display: inline-block;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+  border-width: 0px;
+  line-height: 20px;
+  font-size: 20px;
+  padding-left: 40px;
+  color: #277569;
+  /* firefox 19+ */
+  /* ie */
+  -webkit-transition: width 0.2s ease-in;
+  -moz-transition: width 0.2s ease-in;
+  -o-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+}
+/* line 92, ../sass/style.scss */
+.search-wrapper .search-input::-webkit-input-placeholder {
+  color: #7ae4d4;
+}
+/* line 93, ../sass/style.scss */
+.search-wrapper .search-input::-moz-placeholder {
+  color: #7ae4d4;
+}
+/* line 94, ../sass/style.scss */
+.search-wrapper .search-input:-ms-input-placeholder {
+  color: #7ae4d4;
+}
+/* line 95, ../sass/style.scss */
+.search-wrapper .search-input:-moz-placeholder {
+  color: #7ae4d4;
+  font-weight: 200;
+}
+/* line 98, ../sass/style.scss */
+.search-wrapper .search-button {
+  height: 45px;
+  width: 155px;
+  border: none;
+  background: #168390;
+  color: #70eef1;
+  font-size: 20px;
+  font-weight: 200;
+  margin: 0;
+  display: inline-block;
+  padding: 0;
+  position: relative;
+  box-sizing: content-box;
+  border-width: 0px;
+  line-height: 20px;
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+  cursor: pointer;
+  cursor: hand;
+  left: -5px;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  /* line 98, ../sass/style.scss */
+  .search-wrapper .search-button {
+    top: -1px;
+  }
+}
+
+/* line 125, ../sass/style.scss */
+.content {
+  width: 1160px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+/* line 132, ../sass/style.scss */
+.playlist-wrapper {
+  text-align: left;
+  width: 500px;
+  background: #e6e6e6;
+  border-radius: 6px;
+  box-sizing: border-box;
+  padding: 20px;
+  display: inline-block;
+  margin-left: 25px;
+  margin-right: 25px;
+  vertical-align: top;
+}
+/* line 144, ../sass/style.scss */
+.playlist-wrapper .box-title {
+  font-size: 40px;
+  color: #22bfa7;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+/* line 150, ../sass/style.scss */
+.playlist-wrapper .box-title span {
+  font-size: 22px;
+}
+/* line 156, ../sass/style.scss */
+.playlist-wrapper .song-item {
+  width: 100%;
+  margin-bottom: 15px;
+  background: white;
+  border-radius: 6px;
+  border: 3px solid #dddddd;
+  box-sizing: border-box;
+  padding: 10px;
+  position: relative;
+}
+/* line 166, ../sass/style.scss */
+.playlist-wrapper .song-item .thumbnail {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  float: left;
+}
+/* line 174, ../sass/style.scss */
+.playlist-wrapper .song-item .description {
+  width: 270px;
+  height: 100px;
+  margin-left: 10px;
+  display: inline-block;
+}
+/* line 180, ../sass/style.scss */
+.playlist-wrapper .song-item .description .artist {
+  color: #878787;
+  font-size: 19px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+/* line 187, ../sass/style.scss */
+.playlist-wrapper .song-item .description .album {
+  font-size: 16px;
+  color: #878787;
+  margin-bottom: 10px;
+}
+/* line 192, ../sass/style.scss */
+.playlist-wrapper .song-item .description .title {
+  font-size: 25px;
+  color: #2e2e2e;
+  margin-bottom: 5px;
+}
+/* line 196, ../sass/style.scss */
+.playlist-wrapper .song-item .description .title:link {
+  text-decoration: none;
+}
+/* line 199, ../sass/style.scss */
+.playlist-wrapper .song-item .description .title:hover {
+  text-decoration: underline;
+}
+/* line 205, ../sass/style.scss */
+.playlist-wrapper .song-item .controls {
+  width: 42px;
+  height: 100px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+/* line 213, ../sass/style.scss */
+.playlist-wrapper .song-item .controls .play {
+  width: 42px;
+  height: 42px;
+  background: url("/assets/play.png") no-repeat;
+  display: block;
+  opacity: 1;
+}
+/* line 220, ../sass/style.scss */
+.playlist-wrapper .song-item .controls .play.pause {
+  background: url("/assets/pause.png") no-repeat;
+}
+/* line 224, ../sass/style.scss */
+.playlist-wrapper .song-item .controls .fav {
+  width: 42px;
+  height: 42px;
+  background: url("/assets/heart.png") no-repeat center center;
+  display: block;
+  margin-top: 14px;
+  opacity: 1;
+}
+/* line 232, ../sass/style.scss */
+.playlist-wrapper .song-item .controls .fav.not {
+  opacity: 0.2;
+}
+
+/* line 240, ../sass/style.scss */
+.main-info {
+  width: 500px;
+  display: inline-block;
+  float: left;
+  margin-left: 100px;
+  color: #22bfa7;
+}
+/* line 246, ../sass/style.scss */
+.main-info .playlist-wrapper {
+  margin: 0;
+}
+/* line 250, ../sass/style.scss */
+.main-info .song-info {
+  margin-bottom: 20px;
+  text-align: left;
+  font-weight: normal;
+}
+/* line 254, ../sass/style.scss */
+.main-info .song-info .title {
+  font-size: 45px;
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+/* line 260, ../sass/style.scss */
+.main-info .song-info .artist {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+/* line 264, ../sass/style.scss */
+.main-info .song-info .small-info {
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 7px;
+}
+/* line 268, ../sass/style.scss */
+.main-info .song-info .small-info span {
+  font-weight: 700;
+  font-style: normal;
+}
+/* line 274, ../sass/style.scss */
+.main-info .song-info .controls {
+  margin-top: 15px;
+}
+/* line 276, ../sass/style.scss */
+.main-info .song-info .controls .play {
+  width: 42px;
+  height: 42px;
+  background: url("/assets/play.png") no-repeat;
+  display: inline-block;
+  opacity: 1;
+}
+/* line 283, ../sass/style.scss */
+.main-info .song-info .controls .play.pause {
+  background: url("/assets/pause.png") no-repeat;
+}
+/* line 287, ../sass/style.scss */
+.main-info .song-info .controls .fav {
+  width: 42px;
+  height: 42px;
+  background: url("/assets/heart.png") no-repeat center center;
+  display: inline-block;
+  margin-left: 14px;
+  opacity: 1;
+}
+/* line 295, ../sass/style.scss */
+.main-info .song-info .controls .fav.not {
+  opacity: 0.2;
+}
+
+/* line 303, ../sass/style.scss */
+.additional-info {
+  width: 300px;
+  display: inline-block;
+  color: #919191;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: justify;
+  margin-left: -100px;
+}
+/* line 311, ../sass/style.scss */
+.additional-info .album-cover {
+  width: 300px;
+  height: 300px;
+}
+/* line 315, ../sass/style.scss */
+.additional-info h1 {
+  font-size: 20px;
+  color: #22bfa7;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* line 324, ../sass/style.scss */
+.clearfix {
+  clear: both;
+}
+
+/* line 328, ../sass/style.scss */
+footer {
+  width: 100%;
+  height: 170px;
+  background: #22bfa7;
+  box-sizing: border-box;
+  color: white;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+/* line 338, ../sass/style.scss */
+footer img {
+  margin-top: 10px;
+}

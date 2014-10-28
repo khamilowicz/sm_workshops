@@ -1,15 +1,34 @@
-RUBIO 
-<%= form_tag "/search" do %>
-  <%= label_tag :title %>
-  <%= text_field_tag :title %>
-  <%= label_tag :band %>
-  <%= text_field_tag :band %>
-<%= submit_tag "Search" %>
+<div class="playlist-wrapper songs">
+  <div class="box-title">Songs <span>(<%= @tracks.count %> items)</span></div>
+  <% @tracks.each do |track| %> 
+    <div class="song-item">
+    <a href="#"> <%= image_tag track.cover, class: "thumbnail" %> </a>
+    <div class="description">
+      <div class="artist"><%= track.band %></div>
+      <div class="album">Album: <span>Single</span></div>
+      <%= link_to track.title.truncate(40), track_path(track.sc_id), class: "title" %>
+    </div>
+    <div class="controls">
+      <a class="play" href="#"></a>
+      <a class="fav" href="#"></a>
+    </div>
+  </div>
+  -  <br>
 <% end %>
-<br>
-<% @tracks.each do |track| %> 
-  <%= image_tag track.cover, heigth: 80, width: 80 %> <%= track.title %> - <%= track.band %> <br>
-  <%= link_to track.title, track_path(track.sc_id) %>
-  <%= track.sc_id %>
-  </br>
-<% end %>
+</div>
+
+<div class="playlist-wrapper favourites">
+  <div class="box-title">Favourites <span>(3 items)</span></div>
+  <div class="song-item">
+    <a href="#"><img alt="album cover" class="thumbnail" src="/assets/examplealbum.png" /></a>
+    <div class="description">
+      <div class="artist">Wilkinson feat. Tom Cane</div>
+      <div class="album">Album: <span>Single</span></div>
+      <a class="title" href="#">Half Light</a>
+    </div>
+    <div class="controls">
+      <a class="play" href="#"></a>
+      <a class="fav" href="#"></a>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,38 @@
-<%= link_to "Home", home_path %>
-track
-<%= @track.title %>
-<%= image_tag @track.cover %>
+<div class="main-info">
+  <div class="song-info">
+    <div class="title"><%= @track.title %></div>
+    <div class="artist"><%= @track.band %></div>
+    <div class="album small-info">Album: <span></span></div>
+    <div class="genre small-info">Genre: <span></span></div>
+    <div class="year small-info">Year: <span></span></div>
+    <div class="duration small-info">Duration: <span></span></div>
+    <div class="controls">
+      <a class="play" href="#"></a>
+      <a class="fav" href="#"></a>
+    </div>
+  </div>
+  <div class="playlist-wrapper songs">
+    <div class="box-title">Related <span>(3 items)</span></div>
+    <div class="song-item">
+      <a href="#"><img alt="album cover" class="thumbnail" src="/assets/examplealbum.png" /></a>
+      <div class="description">
+        <div class="artist">Wilkinson feat. Tom Cane</div>
+        <div class="album">Album: <span>Single</span></div>
+        <a class="title" href="#">Half Light</a>
+      </div>
+      <div class="controls">
+        <a class="play" href="#"></a>
+        <a class="fav" href="#"></a>
+      </div>
+    </div>
+  </div>
+</div> 
+<div class="additional-info">
+  <%= image_tag @track.cover, class: "album-cover" %>
+<h1><%= @track.title %></h1>
+  <p>Hybrid Theory is the debut album by the American rock band Linkin Park, released on October 24, 2000 through Warner Bros. Records. The album was a commercial success, having been certified Diamond for sales of over 10 million units in the United States alone as of 2010, peaking at number two on the Billboard 200, and also reaching high positions on other charts worldwide.</p>
+  <h1>Linkin Park</h1>
+  <p>Linkin Park is an American rock band from Agoura Hills, California. Formed in 1996, the band rose to international fame with their debut album Hybrid Theory, which was certified Diamond by the RIAA in 2005 and multi-platinum in several other countries.</p>
+</div>
+<div class="clearfix"></div>
+
