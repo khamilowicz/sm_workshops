@@ -1,11 +1,14 @@
 class Track
-  attr_accessor :title, :band, :cover, :sc_id 
+  attr_accessor :title, :band, :cover, :sc_id , :stream_url
 
-  def initialize title, sc_id, band="Metallica", cover=""
+  SC_CLIENT =  "ba08463663204b0206edffa3e8051c12"
+
+  def initialize title, sc_id, band="Metallica", cover="", stream_url=""
     @sc_id = sc_id
     @title = title 
     @band = band 
     @cover = cover 
+    @stream_url = stream_url + "?client_id=#{SC_CLIENT}"
   end
 
   @@limit = 10
@@ -33,14 +36,16 @@ class Track
   end
 
   def self.new_client
-    Soundcloud.new(client_id:  "ba08463663204b0206edffa3e8051c12") 
+    Soundcloud.new(client_id: SC_CLIENT) 
   end
 
   def self.sc_to_track track
       Track.new(track.title, 
                 track.id,
                 track.user.username, 
-                track.artwork_url) 
+                track.artwork_url,
+                track.stream_url
+               ) 
   end
 
   def to_param
@@ -48,12 +53,6 @@ class Track
   end
 
   def self.all
-    #[
-      #Track.new("Enter Sandman", "Metallica", "http://www.earlytorise.com/wp-content/uploads/2009/10/metallica-enter-sandman-dirty-funker-remixs.jpg"),
-      #Track.new("Lol", "Blog 27"),
-      #Track.new("Hello"),
-      #Track.new("Enter Sandman", "Iron"),
-    #] 
     []
   end
 end

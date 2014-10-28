@@ -1,0 +1,10 @@
+    <div class="song-item">
+    <a href="#"> <%= image_tag track.cover, class: "thumbnail" %> </a>
+    <div class="description">
+      <div class="artist"><%= track.band %></div>
+      <div class="album">Album: <span>Single</span></div>
+      <%= link_to track.title.truncate(40), track_path(track.sc_id), class: "title" %>
+    </div>
+    <%= song_controls track %>
+  </div>
+-  <br>
