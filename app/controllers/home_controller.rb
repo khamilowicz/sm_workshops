@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
 
+  before_filter :set_favorite_tracks, except: [:contact]
+
   def index 
     @tracks = Track.all
   end 
@@ -13,5 +15,13 @@ class HomeController < ApplicationController
   def contact
     
   end
+
+  private
+
+  def set_favorite_tracks 
+    @favorite_tracks = Track.find_all_by_ids(
+      FavouriteTrack.pluck(:track_id)
+    )
+  end 
 
 end

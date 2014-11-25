@@ -5,16 +5,5 @@
 
 <div class="playlist-wrapper favourites">
   <div class="box-title">Favourites <span>(3 items)</span></div>
-  <div class="song-item">
-    <a href="#"><img alt="album cover" class="thumbnail" src="/assets/examplealbum.png" /></a>
-    <div class="description">
-      <div class="artist">Wilkinson feat. Tom Cane</div>
-      <div class="album">Album: <span>Single</span></div>
-      <a class="title" href="#">Half Light</a>
-    </div>
-    <div class="controls">
-      <a class="play" href="#"></a>
-      <a class="fav" href="#"></a>
-    </div>
-  </div>
+  <%= render partial: "tracks/track", collection: @favorite_tracks, as: :track %> 
 </div>

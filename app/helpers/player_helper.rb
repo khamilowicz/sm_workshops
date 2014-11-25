@@ -4,7 +4,7 @@ module PlayerHelper
     audio_tag(track.stream_url, id: track.sc_id) + raw(<<-END)
    <div class="controls">
       <a class="play" href="#" id="#{track.sc_id}"></a>
-      <a class="fav not" href="#"></a>
+      #{button_to "", favorite_track_path(id: track.sc_id), remote: true, class: "fav"}
     </div>
     END
   end

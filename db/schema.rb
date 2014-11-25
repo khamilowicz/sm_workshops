@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141028174317) do
+ActiveRecord::Schema.define(version: 20141113163556) do
+
+  create_table "favourite_tracks", force: true do |t|
+    t.string "track_id"
+  end
 
   create_table "posts", force: true do |t|
     t.text    "content"

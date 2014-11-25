@@ -1,0 +1,4 @@
+$(".playlist-wrapper.favourites").html('\
+  <div class="box-title">Favourites <span>(3 items)</span></div>\
+  <%= j render partial: "tracks/track", collection: @favorite_tracks, as: :track %> \
+    ');

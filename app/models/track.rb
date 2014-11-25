@@ -29,6 +29,13 @@ class Track
     sc_to_track(track)
   end
 
+  def self.find_all_by_ids ids
+    return [] if ids.empty?
+    new_client.get("/tracks", ids: ids.join(","), limit: limit).map do |track|
+      sc_to_track(track)
+    end 
+  end
+
   def self.find_all title
     new_client.get("/tracks", q: title, limit: limit).map do |track|
       sc_to_track(track)
