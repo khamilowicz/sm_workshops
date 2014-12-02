@@ -9,6 +9,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="session-navbar" style="height:2em">
+  <%= session_navbar %>
+  <%= link_to "Register", new_user_registration_path %>
+</div>
 	<div class="main-container">
 		<header>
 			<a href="#" class="logo"><img alt="Rubio logo" src="/assets/logo.png" /></a>

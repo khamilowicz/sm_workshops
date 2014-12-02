@@ -1,0 +1,17 @@
+Users
+
+<div class="users">
+<% @users.each do |user| %>
+  <div class="user">
+    <bold><%= link_to user.email, user  %></bold>
+    <% Track.find_all_by_ids(user.favourite_tracks.pluck(:track_id)).each do |ft| %>
+      <div class="track">
+        <%= ft.title %>
+        <%= image_tag ft.cover %>
+      </div>
+    <% end %>
+  </div>
+  <br>
+  <br> 
+<% end %>
+</div>

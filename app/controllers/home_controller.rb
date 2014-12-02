@@ -19,9 +19,13 @@ class HomeController < ApplicationController
   private
 
   def set_favorite_tracks 
+    if user_signed_in?
     @favorite_tracks = Track.find_all_by_ids(
-      FavouriteTrack.pluck(:track_id)
+      current_user.favourite_tracks.pluck(:track_id)
     )
+    else
+      @favourite_tracks = []
+    end
   end 
 
 end

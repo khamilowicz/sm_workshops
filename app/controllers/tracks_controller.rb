@@ -5,9 +5,14 @@ class TracksController < ApplicationController
   end 
 
   def favorite 
-   FavouriteTrack.create(track_id: params[:id])
-  @favorite_tracks = Track.find_all_by_ids(
-      FavouriteTrack.pluck(:track_id)
+    if user_signed_in?
+      current_user.favourite_tracks.create(track_id: params[:id])
+
+    @favorite_tracks = Track.find_all_by_ids(
+      current_user.favourite_tracks.pluck(:track_id)
     )
+    else 
+      @favourite_tracks = []
+    end
   end
 end
